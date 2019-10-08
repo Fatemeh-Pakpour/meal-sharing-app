@@ -9,7 +9,7 @@ const port = process.env.PORT || 5000;
 // For week4 no need to look into this!
  const path = require('path'); 
 // Serve the built client html
-const buildPath = path.join(__dirname, "../../public");
+const buildPath = path.join(__dirname, "../../dist");
 app.use(express.static(buildPath)); 
 // app.use(express.static('../../public'));
 // app.use(express.static('../../public/images'))
