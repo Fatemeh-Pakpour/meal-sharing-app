@@ -8,8 +8,8 @@ function homeRouter(req, router) {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-4">
-                <a class="nav-item nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">MEALS</a>
+                <a class="nav-item nav-link" href="http://localhost:3000">HOME <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="http://localhost:3000/meals">MEALS</a>
                 <a class="nav-item nav-link" href="#">REVIEWS</a>
             </div>
         </div>
@@ -29,7 +29,7 @@ function homeRouter(req, router) {
 }
 
 function fetchFeaturedMeal(){
-const url = `/api/meals`;
+const url = "/api/meals";
   fetch(url)
   .then(response=>response.json())   
   .then(meal =>{
@@ -38,7 +38,7 @@ const url = `/api/meals`;
   }
 function renderFeaturedMeal(data){
     const selectedMeal=data.filter(meal => {
-        return meal.title==="Sushi with drink"|| meal.title.toLowerCase().trim()==="english clam chowder" || meal.title.toLowerCase()==="turkish food" || meal.title.toLowerCase()==="free vegeterian food"; 
+        return meal.title==="Brazilian Food"|| meal.title==="English Clam Chowder" || meal.title==="Turkish food" || meal.title==="English clam chowder"; 
     });
     console.log(selectedMeal);
    
