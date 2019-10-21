@@ -28,4 +28,37 @@ function homeRouter(req, router) {
   `;
 }
 
+function fetchFeaturedMeal(){
+const url = `/api/meals`;
+  fetch(url)
+  .then(response=>response.json())   
+  .then(meal =>{
+    console.log(meal);
+    renderFeaturedMeal(meal)});
+  }
+function renderFeaturedMeal(data){
+    const selectedMeal=data.filter(meal => {
+        return meal.title==="Sushi with drink"|| meal.title.toLowerCase().trim()==="english clam chowder" || meal.title.toLowerCase()==="turkish food" || meal.title.toLowerCase()==="free vegeterian food"; 
+    });
+    console.log(selectedMeal);
+   
+        selectedMeal.forEach(meal=> {
+            const featuredMeals = document.createElement("div");
+            featuredMeals.setAttribute("class", "featured-meal medium-size large-size");
+            const featuredMealContainer = document.querySelector("#featured-meal-container");
+            featuredMeals.innerHTML= `
+                <div class ="featured-meal-sub-container">
+                    <div class ="featured-meal-content">
+                        <h4>${meal.title}</h4>
+                        <p>${meal.description}</p>
+                    </div>    
+                </div>    
+            
+            ` 
+            featuredMealContainer.appendChild(featuredMeals);
+        });
+      }
+
+
+fetchFeaturedMeal();      
 export default homeRouter;
