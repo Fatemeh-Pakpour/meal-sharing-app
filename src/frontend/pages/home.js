@@ -10,7 +10,7 @@ function homeRouter(req, router) {
             <div class="navbar-nav ml-4">
                 <a class="nav-item nav-link" href="http://localhost:3000">HOME <span class="sr-only">(current)</span></a>
                 <a class="nav-item nav-link" href="http://localhost:3000/meals">MEALS</a>
-                <a class="nav-item nav-link" href="#">REVIEWS</a>
+                <a class="nav-item nav-link" href="http://localhost:3000/reviews">REVIEWS</a>
             </div>
         </div>
     </div>

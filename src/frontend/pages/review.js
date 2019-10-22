@@ -87,7 +87,4 @@ function getRatings(starRating , ratingClass) {
   }
 
 
-
-
-
 export default reviewRouter;
