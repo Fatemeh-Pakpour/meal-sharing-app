@@ -4,10 +4,10 @@ require("dotenv").config();
 
 var pool = mysql.createPool({
   connectionLimit: 10,
-  host: process.env.HOST,
-  user: process.env.USERNAME,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
+  host: process.env.DATABASE_HOST,
+  user: process.env.DATABASE_USERNAME,
+  password: process.env.DATABASE_PASSWORD,
+  database: process.env.DATABASE_DATABASE,
   // port: process.env.PORT,
   multipleStatements: true
 });

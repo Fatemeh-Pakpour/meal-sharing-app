@@ -8,9 +8,9 @@ function homeRouter(req, router) {
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-4">
-                <a class="nav-item nav-link" href="http://localhost:3000">HOME <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="http://localhost:3000/meals">MEALS</a>
-                <a class="nav-item nav-link" href="http://localhost:3000/reviews">REVIEWS</a>
+            <a class="nav-item nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/meals">MEALS</a>
+                <a class="nav-item nav-link" href="/reviews">REVIEWS</a>
             </div>
         </div>
     </div>
