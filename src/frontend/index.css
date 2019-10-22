@@ -5,9 +5,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-*, *:before, *:after {
-    box-sizing: border-box;
-  }
 #featured-meal-container{
     display:flex;
     flex-wrap: wrap;
@@ -60,13 +57,14 @@
 }
 
 /* start star rating  */
-.stars-inner li,
+/* .stars-inner li,
 .stars-outer {
   padding: 10px;
-}
+} */
 
 .stars-outer {
   position: relative;
+  display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;

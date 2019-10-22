@@ -27,12 +27,6 @@ function reviewRouter(req, router) {
 `
 }
 
-
-
-
-
-
-
 function fetchAllReviews() {
   const url = `/api/reviews`;
   fetch(url)
@@ -53,16 +47,12 @@ function renderAllReviews(allReviews) {
                     <li>Description : ${review.description}</li>
                     <li>Meal's id : ${review.meal_id}</li>
                     <li>Created date : ${review.created_date}</li> 
-                    <li>${review.stars} </li>
                     <div class ="stars-outer">
                       <li class ="stars-inner meal-${review.id}"></li>
                     </div>  
                 </div>    
             </div>   
         `;
- 
-  
- 
   reviewsContainer.appendChild(reviewElement);
   getRatings(review.stars , `meal-${review.id}`);
   });

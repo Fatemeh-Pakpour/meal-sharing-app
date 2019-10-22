@@ -38,7 +38,7 @@ const url = "/api/meals";
   }
 function renderFeaturedMeal(data){
     const selectedMeal=data.filter(meal => {
-        return meal.title==="Brazilian Food"|| meal.title==="English Clam Chowder" || meal.title==="Turkish food" || meal.title==="English clam chowder"; 
+        return meal.title==="Brazilian Food"|| meal.title==="English clam chowder " || meal.title==="Turkish Food" || meal.title==="Sushi with drink"; 
     });
     console.log(selectedMeal);
    
